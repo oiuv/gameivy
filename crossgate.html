@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="GameIvy 魔力宝贝客户端、CG.zip 补丁下载、自动注册方式与玩家 QQ 群。">
+  <title>魔力宝贝 · GameIvy</title>
+  <link rel="stylesheet" href="./gameivy.css">
+  <script src="./gameivy.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳至主要内容</a>
+  <header class="site-header">
+    <div class="wrap site-bar">
+      <a class="brand" href="./" aria-label="GameIvy 首页"><span class="brand-mark" aria-hidden="true"></span>GameIvy</a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="./">首页</a>
+        <a href="./#games" aria-current="true">游戏目录</a>
+        <a href="./ai.html">技术文档</a>
+        <a href="./about.html">关于我们</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="article-head">
+      <div class="wrap">
+        <nav class="breadcrumbs" aria-label="当前位置"><a href="./">首页</a><span aria-hidden="true">/</span><a href="./#games">游戏目录</a><span aria-hidden="true">/</span><span aria-current="page">魔力宝贝</span></nav>
+        <h1>魔力宝贝</h1>
+        <p>以回合制战斗、职业成长和宠物培养为核心的经典网游。下载安装客户端和补丁，就可以登录我们运营的游戏。</p>
+        <div class="actions"><a class="button" href="#downloads">查看客户端下载</a></div>
+      </div>
+    </div>
+    <div class="wrap article-layout">
+      <article class="article">
+        <section id="downloads">
+          <h2>客户端与补丁下载</h2>
+          <div class="download-list">
+            <div class="download">
+              <div><strong>游戏客户端</strong><small>cgtw_7.1_20220101.7z · 完整客户端</small></div>
+              <a href="https://down.cgmsv.com/cgtw_7.1_20220101.7z" aria-label="下载客户端 · 游戏客户端">下载客户端 <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="download">
+              <div><strong>客户端补丁</strong><small>CG.zip · 约 583 KiB</small></div>
+              <a href="./downloads/CG.zip" aria-label="下载补丁 · 客户端补丁">下载补丁</a>
+            </div>
+          </div>
+        </section>
+        <section id="login">
+          <h2>安装和首次登录</h2>
+          <ol>
+            <li>将 <code>cgtw_7.1_20220101.7z</code> 解压到游戏目录。</li>
+            <li>把 <code>CG.zip</code> 的文件解压到同一目录，使补丁文件和客户端放在一起，再启动客户端。</li>
+            <li><strong>无需在网页单独注册。</strong>用客户端输入想使用的账号和密码，首次登录时会自动注册。之后继续使用同一组账号和密码。</li>
+          </ol>
+          <p class="note">如果启动或登录失败，可以向 QQ 群反馈客户端版本、报错内容和发生时间。提交截图时请遮住密码。</p>
+        </section>
+        <section id="deploy">
+          <h2>服务端维护参考</h2>
+          <p>公开下载区提供游戏客户端和补丁。维护服务端时，把服务端构建、客户端协议版本和补丁作为同一套发布记录管理。</p>
+          <p>更新前先在隔离环境验证新账号首次登录、已有账号重新登录、进游戏及角色保存。记录旧版客户端和补丁，以便出现兼容问题时定位。</p>
+        </section>
+      </article>
+      <aside class="sidebar">
+        <section class="side-panel" aria-labelledby="chat-title">
+        <h2 id="chat-title">玩家 QQ 群</h2>
+        <span class="qq-number" id="qq-group">6446640</span>
+        <button class="copy" type="button" data-copy-qq="qq-group" hidden>复制群号</button>
+        <span class="copy-status" role="status"></span>
+      </section>
+        <nav class="side-panel" aria-label="本页目录">
+        <h2>本页目录</h2>
+        <ul class="jump-list">
+          <li><a href="#downloads">客户端与补丁下载</a></li>
+          <li><a href="#login">安装和首次登录</a></li>
+          <li><a href="#deploy">服务端维护参考</a></li>
+        </ul>
+      </nav>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 游戏常春藤·保留所有权利</span>
+      <a href="https://beian.miit.gov.cn/">京ICP备13031296号-2</a>
+      <a class="footer-community" href="./about.html#community">玩家 QQ 群</a>
+    </div>
+  </footer>
+</body>
+</html>

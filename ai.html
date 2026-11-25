@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="把交给 AI 的任务写清楚，用实际的编译输出、测试结果和游戏内检查验证每一步。">
+  <title>AI 辅助编译与维护 · GameIvy</title>
+  <link rel="stylesheet" href="/gameivy.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳至主要内容</a>
+  <header class="site-header">
+    <div class="wrap site-bar">
+      <a class="brand" href="/" aria-label="GameIvy 首页"><span class="brand-mark" aria-hidden="true"></span>GameIvy</a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="/">首页</a>
+        <a href="/#games">游戏目录</a>
+        <a href="/ai.html" aria-current="page">技术文档</a>
+        <a href="/about.html">关于我们</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="article-head">
+      <div class="wrap">
+        <nav class="breadcrumbs" aria-label="当前位置"><a href="/">首页</a><span aria-hidden="true">/</span><span aria-current="page">AI 辅助编译与维护</span></nav>
+        <h1>AI 辅助编译与维护</h1>
+        <p>把交给 AI 的任务写清楚，用实际的编译输出、测试结果和游戏内检查验证每一步。</p>
+      </div>
+    </div>
+    <div class="wrap article-layout">
+      <article class="article">
+        <section id="prepare">
+          <h2>1. 提供可复现的上下文</h2>
+          <p>开始前记录仓库和提交、操作系统、编译器、构建类型及客户端版本。把项目 README、构建说明，以及能复现问题的完整命令交给 AI。日志可以截取第一条错误前后的上下文，先删去凭据、数据库连接串和玩家信息。</p>
+          <pre><code>git status --short
+git rev-parse --short HEAD
+git submodule status
+cmake --version</code></pre>
+          <p>只有项目使用 CMake 时才需要最后一项。项目已有的构建脚本和文档优先。</p>
+        </section>
+        <section id="compile">
+          <h2>2. 编译与定位首个错误</h2>
+          <ol>
+            <li>让 AI 先读取项目构建说明，列出需要的依赖、生成器和目标。使用独立构建目录，在测试环境执行。</li>
+            <li>从第一个导致失败的错误着手。区分编译、链接、生成器配置和运行期依赖，随后再检查派生错误。</li>
+            <li>改动后使用相同环境和命令复跑。确认进程退出码和产物路径，并运行仓库现有测试。</li>
+          </ol>
+          <h3>已经确认项目采用 CMake 时的示例</h3>
+          <pre><code>cmake -S . -B build
+cmake --build build --config Release --parallel 2</code></pre>
+          <p>Visual Studio 等多配置生成器通过 <code>--config Release</code> 选择构建类型。Ninja 或 Makefiles 等单配置生成器通常在配置时指定 <code>-DCMAKE_BUILD_TYPE=Release</code>。构建参数以仓库文档为准。</p>
+          <h3>可直接使用的任务描述</h3>
+          <pre><code>先读取当前仓库的构建说明。根据我的系统、提交和日志，
+指出第一个失败步骤，引用对应文件或错误行。
+给出范围最小的修复，并用原命令复跑。
+报告退出码、产物路径和未完成的验证。</code></pre>
+        </section>
+        <section id="maintenance">
+          <h2>3. 维护、升级和回滚</h2>
+          <ol>
+            <li>把问题写成可观察的结果，例如“重连后角色仍在原地图”。记录程序版本、配置、数据库或存档版本。</li>
+            <li>让 AI 对照日志与代码列出证据。依次验证进程启动、账号登录、核心交互、保存及重连。</li>
+            <li>涉及数据库或存档更新，先备份并在隔离环境试恢复。把回滚所需的程序、数据和配置作为一组保存。</li>
+            <li>正式发布前人工确认变更范围。发布后复查日志、可用性和实际游戏流程。</li>
+          </ol>
+          <p>可以让 AI 生成升级清单、整理失败日志、审阅差异。保留原始输出，才能区分编译通过、测试通过与线上验证。</p>
+        </section>
+        <section id="examples">
+          <h2>4. 按项目验收</h2>
+          <ul>
+            <li><a href="/wow.html#deploy">魔兽世界</a>。检查核心分支对应的客户端构建、数据文件及数据库更新，验证登录、选服和进图。</li>
+            <li><a href="/1000y.html#deploy">云端千年</a>。核对服务端、资源和客户端版本，分别验证 Windows 和安卓端的显示与登录。</li>
+            <li><a href="/crossgate.html#deploy">魔力宝贝</a>。检查补丁与客户端版本，使用测试账号验证首次自动注册和再次登录。</li>
+            <li><a href="/mud.html#deploy">文字 MUD</a>。区分 FluffOS 驱动构建和 LPC 脚本加载，分别验证登录、指令、存档与重连。</li>
+          </ul>
+        </section>
+      </article>
+      <aside class="sidebar">
+        <nav class="side-panel" aria-label="本页目录">
+          <h2>本页目录</h2>
+          <ul class="jump-list">
+            <li><a href="#prepare">准备上下文</a></li>
+            <li><a href="#compile">编译与排错</a></li>
+            <li><a href="#maintenance">维护与回滚</a></li>
+            <li><a href="#examples">项目验收</a></li>
+          </ul>
+        </nav>
+      </aside>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 游戏常春藤·保留所有权利</span>
+      <a href="https://beian.miit.gov.cn/">京ICP备13031296号-2</a>
+      <a class="footer-community" href="/about.html#community">玩家 QQ 群</a>
+    </div>
+  </footer>
+</body>
+</html>
