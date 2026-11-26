@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="GameIvy 魔兽世界运营官网、服务端部署参考、开源项目与玩家 QQ 群。">
+  <meta name="description" content="魔兽世界暴雪中国官网、GameIvy 开源服、客户端下载、服务端部署资料与玩家 QQ 群。">
   <title>魔兽世界 · GameIvy</title>
   <link rel="stylesheet" href="./gameivy.css">
   <script src="./gameivy.js" defer></script>
@@ -16,7 +16,7 @@
       <nav class="site-nav" aria-label="主导航">
         <a href="./">首页</a>
         <a href="./#games" aria-current="true">游戏目录</a>
-        <a href="./ai.html">技术文档</a>
+        <a href="./ai.html">AI指南</a>
         <a href="./about.html">关于我们</a>
       </nav>
     </div>
@@ -27,15 +27,18 @@
       <div class="wrap">
         <nav class="breadcrumbs" aria-label="当前位置"><a href="./">首页</a><span aria-hidden="true">/</span><a href="./#games">游戏目录</a><span aria-hidden="true">/</span><span aria-current="page">魔兽世界</span></nav>
         <h1>魔兽世界</h1>
-        <p>在大型多人角色扮演世界中探索地图、组队挑战副本和团本。游戏版本、加入方式与维护公告以运营官网为准。</p>
-        <div class="actions"><a href="https://wow.gameivy.com/" class="button">进入魔兽世界官网 <span aria-hidden="true">↗</span></a></div>
+        <p>在大型多人角色扮演世界中探索地图、组队挑战副本和团本。</p>
+        <div class="actions">
+          <a href="https://wow.blizzard.cn/?source=wow163" class="button" target="_blank" rel="noopener">暴雪中国官网 <span aria-hidden="true">↗</span></a>
+          <a href="https://wow.gameivy.com/" class="button secondary" target="_blank" rel="noopener">GameIvy 开源服 <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
     </div>
     <div class="wrap article-layout">
       <article class="article">
         <section id="play">
           <h2>游玩与客户端</h2>
-          <p>进入 <a href="https://wow.gameivy.com/">GameIvy 魔兽世界运营官网 <span aria-hidden="true">↗</span></a> 查看当前服务端版本、游戏入口与公告。选择客户端时请以官网公布的版本与构建号为准。</p>
+          <p>在 <a href="https://wow.gameivy.com/" target="_blank" rel="noopener">GameIvy 开源服 <span aria-hidden="true">↗</span></a> 查看当前服务端版本、加入方式和维护公告，再按所需构建号下载客户端。</p>
           <h3 id="client-335">3.3.5a 客户端下载</h3>
           <div class="download-list">
             <div class="download">
@@ -66,7 +69,7 @@
               <a href="./downloads/WoWClientRebuilder.zip" aria-label="下载 WoWClientRebuilder.zip">下载工具</a>
             </div>
           </div>
-          <p>解压后运行 <code>wowrebuild.exe</code>，在菜单中选择 5.4.8 及保存目录。工具会从暴雪的官方分发服务器下载客户端文件。</p>
+          <p>解压后运行 <code>wowrebuild.exe</code>，在菜单中选择 5.4.8 及保存目录。工具会从暴雪的官方分发服务器下载客户端文件。为 5.4.8 Playerbots 提取服务端数据时，请下载 <code>enUS</code> 客户端。</p>
         </section>
         <section id="downloads">
           <h2>服务端源码与文档</h2>
@@ -74,33 +77,67 @@
           <div class="download-list">
             <div class="download">
               <div><strong>TrinityCore</strong><small>开源 MMO 核心、各分支支持版本及构建入口。</small></div>
-              <a href="https://github.com/TrinityCore/TrinityCore" aria-label="查看源码 · TrinityCore">查看源码 <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/TrinityCore/TrinityCore" aria-label="查看源码 · TrinityCore" target="_blank" rel="noopener">查看源码 <span aria-hidden="true">↗</span></a>
             </div>
             <div class="download">
               <div><strong>AzerothCore</strong><small>安装、数据库、网络与客户端配置说明。</small></div>
-              <a href="https://www.azerothcore.org/wiki/installation" aria-label="阅读安装指南 · AzerothCore">阅读安装指南 <span aria-hidden="true">↗</span></a>
+              <a href="https://www.azerothcore.org/wiki/installation" aria-label="阅读安装指南 · AzerothCore" target="_blank" rel="noopener">阅读安装指南 <span aria-hidden="true">↗</span></a>
             </div>
           </div>
+          <h3 id="server-data-335">3.3.5a 服务端 Data</h3>
+          <div class="download-list">
+            <div class="download">
+              <div><strong>AzerothCore 预提取数据</strong><small>服务端使用的地图与 DBC 等数据文件。</small></div>
+              <a href="https://github.com/wowgaming/client-data/releases/" aria-label="打开 3.3.5a 服务端 Data 下载页" target="_blank" rel="noopener">前往下载 <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="download">
+              <div><strong>AzerothCore Windows 服务端配置</strong><small>包含预提取数据的安装、自行提取数据及服务端配置。</small></div>
+              <a href="https://www.azerothcore.org/wiki/windows-server-setup" aria-label="阅读 AzerothCore Windows 服务端配置指南" target="_blank" rel="noopener">阅读指南 <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <p>部署 AzerothCore 时，可下载与核心匹配的 enUS 预提取 Data，解压到服务端的 <code>Data</code> 目录，并在 <code>worldserver.conf</code> 中将 <code>DataDir</code> 指向该目录。玩家仍可用同构建号的简体中文客户端登录。自行提取时，用来提取的客户端安装目录需要包含对应语言的资源。</p>
         </section>
         <section id="playerbots">
           <h2>单机部署与玩家机器人</h2>
           <p>用玩家机器人组队或体验单机玩法时，可以按客户端版本选择以下项目。</p>
+          <ul>
+            <li><strong>3.3.5a AzerothCore Playerbots</strong>。按项目说明编译服务端，可下载与核心匹配的<a href="#server-data-335">预提取 enUS Data</a>。</li>
+            <li><strong>5.4.8 LoA-Pandaria-Playerbots</strong>。直接使用项目提供的服务端发布包，再用随包工具从 5.4.8（18414）enUS 客户端提取 Data。</li>
+          </ul>
           <div class="download-list">
             <div class="download">
-              <div><strong>3.3.5 巫妖王之怒 · AzerothCore Playerbots</strong><small>使用 Playerbot 分支，并配套安装 <a href="https://github.com/mod-playerbots/mod-playerbots">mod-playerbots 模块</a>。</small></div>
-              <a href="https://github.com/mod-playerbots/azerothcore-wotlk" aria-label="查看 3.3.5 AzerothCore Playerbots 项目">查看项目 <span aria-hidden="true">↗</span></a>
+              <div><strong>3.3.5 巫妖王之怒 · AzerothCore Playerbots</strong><small>使用 Playerbot 分支，并配套安装 <a href="https://github.com/mod-playerbots/mod-playerbots" target="_blank" rel="noopener">mod-playerbots 模块</a>。</small></div>
+              <a href="https://github.com/mod-playerbots/azerothcore-wotlk" aria-label="查看 3.3.5 AzerothCore Playerbots 项目" target="_blank" rel="noopener">查看项目 <span aria-hidden="true">↗</span></a>
             </div>
             <div class="download">
-              <div><strong>5.4.8 熊猫人之谜 · LoA-Pandaria-Playerbots</strong><small>已集成玩家机器人模块，可按仓库说明编译或使用项目发布包。</small></div>
-              <a href="https://github.com/1LineAtaTime/LoA-Pandaria-Playerbots" aria-label="查看 5.4.8 LoA-Pandaria-Playerbots 项目">查看项目 <span aria-hidden="true">↗</span></a>
+              <div><strong>5.4.8 熊猫人之谜 · LoA-Pandaria-Playerbots</strong><small>已集成玩家机器人模块，项目提供服务端发布包。</small></div>
+              <a href="https://github.com/1LineAtaTime/LoA-Pandaria-Playerbots" aria-label="查看 5.4.8 LoA-Pandaria-Playerbots 项目" target="_blank" rel="noopener">查看项目 <span aria-hidden="true">↗</span></a>
             </div>
           </div>
+          <h3 id="playerbots-548-setup">5.4.8 安装与 Data 提取</h3>
+          <div class="download-list">
+            <div class="download">
+              <div><strong>5.4.8 服务端发布包</strong><small>选择对应平台的服务端程序，并下载同版本的数据库包。</small></div>
+              <a href="https://github.com/1LineAtaTime/LoA-Pandaria-Playerbots/releases" aria-label="下载 5.4.8 Playerbots 服务端发布包" target="_blank" rel="noopener">查看发布包 <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="download">
+              <div><strong>5.4.8 安装说明</strong><small>涵盖客户端数据提取、数据库初始化、配置与启动。</small></div>
+              <a href="https://github.com/1LineAtaTime/LoA-Pandaria-Playerbots#readme" aria-label="阅读 5.4.8 Playerbots 安装说明" target="_blank" rel="noopener">阅读项目说明 <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <ol>
+            <li>解压服务端发布包。Windows 使用 Win64 包，按发布说明安装所需运行库和 MySQL。</li>
+            <li>准备 <a href="#client-548">5.4.8（18414）enUS 客户端</a>。将发布包中的提取工具放到客户端目录，在该目录运行 <code>mapextractor.exe</code>，生成 <code>dbc</code>、<code>maps</code> 和 <code>cameras</code>。</li>
+            <li>运行 <code>vmap4extractor.exe</code>，再运行 <code>vmap4assembler.exe Buildings vmaps</code>。创建空的 <code>mmaps</code> 目录，然后运行 <code>mmaps_generator.exe</code> 生成机器人寻路所需的数据。此步骤可能需要数小时。</li>
+            <li>将 <code>dbc</code>、<code>maps</code>、<code>vmaps</code>、<code>mmaps</code> 和 <code>cameras</code> 放入服务端的同一个 Data 目录，在 <code>worldserver.conf</code> 中将 <code>DataDir</code> 指向该目录。</li>
+            <li>全新安装时，导入发布包中的 <code>auth</code>、<code>characters</code>、<code>world</code> 和 <code>playerbots</code> 数据库转储，并填好连接配置。先启动 <code>authserver</code>，再启动 <code>worldserver</code>。已有实例按项目的升级步骤操作。</li>
+          </ol>
         </section>
         <section id="deploy">
           <h2>自建部署顺序</h2>
           <ol>
             <li>确定核心分支和客户端构建号，记录源码提交、数据库版本、提取工具及地图数据版本。</li>
-            <li>按照该分支的要求安装编译工具链与依赖，编译核心和所需的数据提取工具。</li>
+            <li>按所选项目准备服务端程序和提取工具。使用源码时按分支要求编译，使用发行包时下载对应平台的构建。</li>
             <li>在隔离环境导入基础数据库、应用对应更新，配置认证和世界服务的地址与数据目录。</li>
             <li>依次启动服务，核对日志，验证登录、选服、建角、进地图和重连，再开放玩家连接。</li>
           </ol>
@@ -120,6 +157,7 @@
           <li><a href="#play">游玩与客户端</a></li>
           <li><a href="#downloads">服务端源码与文档</a></li>
           <li><a href="#playerbots">单机部署与玩家机器人</a></li>
+          <li><a href="#playerbots-548-setup">5.4.8 安装与 Data 提取</a></li>
           <li><a href="#deploy">自建部署顺序</a></li>
         </ul>
       </nav>
@@ -130,7 +168,7 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <span>© 2026 游戏常春藤·保留所有权利</span>
-      <a href="https://beian.miit.gov.cn/">京ICP备13031296号-2</a>
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备13031296号-2</a>
       <a class="footer-community" href="./about.html#community">玩家 QQ 群</a>
     </div>
   </footer>

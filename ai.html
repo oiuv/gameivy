@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="把交给 AI 的任务写清楚，用实际的编译输出、测试结果和游戏内检查验证每一步。">
-  <title>AI 辅助编译与维护 · GameIvy</title>
+  <meta name="description" content="使用 AI 阅读源码与文档，辅助游戏服务器编译、部署、启动和运维排错。">
+  <title>AI指南 · GameIvy</title>
   <link rel="stylesheet" href="/gameivy.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
       <nav class="site-nav" aria-label="主导航">
         <a href="/">首页</a>
         <a href="/#games">游戏目录</a>
-        <a href="/ai.html" aria-current="page">技术文档</a>
+        <a href="/ai.html" aria-current="page">AI指南</a>
         <a href="/about.html">关于我们</a>
       </nav>
     </div>
@@ -23,9 +23,9 @@
   <main id="main">
     <div class="article-head">
       <div class="wrap">
-        <nav class="breadcrumbs" aria-label="当前位置"><a href="/">首页</a><span aria-hidden="true">/</span><span aria-current="page">AI 辅助编译与维护</span></nav>
-        <h1>AI 辅助编译与维护</h1>
-        <p>把交给 AI 的任务写清楚，用实际的编译输出、测试结果和游戏内检查验证每一步。</p>
+        <nav class="breadcrumbs" aria-label="当前位置"><a href="/">首页</a><span aria-hidden="true">/</span><span aria-current="page">AI指南</span></nav>
+        <h1>AI指南</h1>
+        <p>所有游戏服务器的部署和运维问题，都推荐使用 AI 辅助。拥有终端和目标环境所需权限的 AI 助手可以阅读项目源码与文档，自动编译、部署和启动服务，并检查运行结果。</p>
       </div>
     </div>
     <div class="wrap article-layout">
@@ -56,8 +56,17 @@ cmake --build build --config Release --parallel 2</code></pre>
 给出范围最小的修复，并用原命令复跑。
 报告退出码、产物路径和未完成的验证。</code></pre>
         </section>
+        <section id="deploy">
+          <h2>3. 部署并启动服务</h2>
+          <p>把仓库路径、目标环境和验收条件交给 AI。让它按项目文档执行部署与启动，并用日志、监听端口和实际游戏连接验证服务。</p>
+          <h3>可直接交给 AI 的部署任务</h3>
+          <pre><code>读取这个仓库的 README、构建与部署文档，确认当前版本和依赖。
+在指定环境按项目文档编译、部署并启动服务。
+检查进程、启动日志、监听端口和客户端能否连接。
+报告实际执行的命令、所部署的版本和验证结果。</code></pre>
+        </section>
         <section id="maintenance">
-          <h2>3. 维护、升级和回滚</h2>
+          <h2>4. 维护、升级和回滚</h2>
           <ol>
             <li>把问题写成可观察的结果，例如“重连后角色仍在原地图”。记录程序版本、配置、数据库或存档版本。</li>
             <li>让 AI 对照日志与代码列出证据。依次验证进程启动、账号登录、核心交互、保存及重连。</li>
@@ -67,7 +76,7 @@ cmake --build build --config Release --parallel 2</code></pre>
           <p>可以让 AI 生成升级清单、整理失败日志、审阅差异。保留原始输出，才能区分编译通过、测试通过与线上验证。</p>
         </section>
         <section id="examples">
-          <h2>4. 按项目验收</h2>
+          <h2>5. 按项目验收</h2>
           <ul>
             <li><a href="/wow.html#deploy">魔兽世界</a>。检查核心分支对应的客户端构建、数据文件及数据库更新，验证登录、选服和进图。</li>
             <li><a href="/1000y.html#deploy">云端千年</a>。核对服务端、资源和客户端版本，分别验证 Windows 和安卓端的显示与登录。</li>
@@ -82,6 +91,7 @@ cmake --build build --config Release --parallel 2</code></pre>
           <ul class="jump-list">
             <li><a href="#prepare">准备上下文</a></li>
             <li><a href="#compile">编译与排错</a></li>
+            <li><a href="#deploy">部署并启动服务</a></li>
             <li><a href="#maintenance">维护与回滚</a></li>
             <li><a href="#examples">项目验收</a></li>
           </ul>
@@ -92,7 +102,7 @@ cmake --build build --config Release --parallel 2</code></pre>
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <span>© 2026 游戏常春藤·保留所有权利</span>
-      <a href="https://beian.miit.gov.cn/">京ICP备13031296号-2</a>
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">京ICP备13031296号-2</a>
       <a class="footer-community" href="/about.html#community">玩家 QQ 群</a>
     </div>
   </footer>

@@ -3,8 +3,9 @@
 ## 网站维护
 
 - 这是部署在阿里云 OSS Bucket `gameivy` 的纯静态站点，公网域名为 `https://gameivy.com/`。使用现有的 HTML、CSS 和原生 JavaScript。直接编辑相关页面，无需构建或数据库迁移。
-- 游戏模块对应 `wow.html`、`1000y.html`、`crossgate.html`、`minecraft.html` 和 `mud.html`。`about.html` 汇总社区入口，`ai.html` 存放 AI 辅助编译与维护文档。
+- 游戏模块对应 `wow.html`、`1000y.html`、`crossgate.html`、`minecraft.html` 和 `mud.html`。`about.html` 汇总社区入口，`ai.html` 提供编译、部署和运维的 AI指南。
 - 复用 `gameivy.css` 和 `gameivy.js`，检查窄屏布局、内部链接、锚点和下载入口。保留页脚备案号 `京ICP备13031296号-2` 及工信部备案系统链接。
+- 指向 `gameivy.com` 以外网站的链接使用 `target="_blank"` 和 `rel="noopener"`。站内导航、锚点及本站下载链接沿用默认行为。
 
 ## Git 与发布
 
