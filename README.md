@@ -26,7 +26,7 @@ python -m http.server 8000 --bind 127.0.0.1
 | 错误页 | `404.html`，HTTP 404 |
 | 下载对象前缀 | `downloads/` |
 
-部署时只上传本次变更的站点页面和资源。站点文件包括 `index.html`、`404.html`、`about.html`、`ai.html`、`wow.html`、`1000y.html`、`crossgate.html`、`minecraft.html`、`mud.html`、`gameivy.css`、`gameivy.js` 和 `gameivy-valley.jpg`。下载包按需单独上传到 `downloads/` 前缀，并通过 `gameivy.com` 提供下载。
+部署时只上传本次变更的站点页面和资源。页面包括 `index.html`、`404.html`、`about.html`、`ai.html`、`wow.html`、`1000y.html`、`crossgate.html`、`minecraft.html` 和 `mud.html`。静态资源包括 `gameivy.css`、`gameivy.js`、`favicon.ico`、首页横幅 `gameivy-valley.jpg`，以及卡片配图 `wow.png`、`1000y.png`、`crossgate.png`、`minecraft.png`、`mud-card.jpg` 和 `about-card.jpg`。下载包按需单独上传到 `downloads/` 前缀，并通过 `gameivy.com` 提供下载。
 
 `README.md`、`AGENTS.md`、`.gitignore`、`.git/` 和其他 Git 配置仅用于仓库管理。部署采用逐文件上传，**不要同步整个项目目录到 OSS**。
 

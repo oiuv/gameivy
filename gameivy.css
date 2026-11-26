@@ -54,8 +54,10 @@ button { font: inherit; }
 .section-heading h2 { margin: 0; font: 800 clamp(1.8rem, 3vw, 2.45rem)/1.2 var(--serif); }
 .section-heading p { margin: 0; color: var(--quiet); font-size: .93rem; }
 .module-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-.module-card { min-width: 0; display: flex; flex-direction: column; border: 1px solid var(--line); border-top: 3px solid var(--accent, #62794d); border-radius: 5px; background: var(--paper); padding: 20px; }
+.module-card { min-width: 0; display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-top: 3px solid var(--accent, #62794d); border-radius: 5px; background: var(--paper); }
 .module-card:hover { border-color: var(--accent, #62794d); }
+.module-card-image { display: block; width: 100%; height: auto; aspect-ratio: 2 / 1; object-fit: cover; border-bottom: 1px solid var(--line); background: #eae7db; }
+.module-card-body { flex: 1; min-width: 0; display: flex; flex-direction: column; padding: 17px 20px 20px; }
 .module-card h3 { margin-bottom: 8px; font: 800 1.48rem/1.35 var(--serif); }
 .module-card p { color: var(--quiet); margin-bottom: 17px; font-size: .9rem; }
 .world-type { margin-bottom: 8px; color: var(--accent, #62794d); font-size: .77rem; font-weight: 700; }
