@@ -68,16 +68,11 @@
               <div><strong>熊猫人之谜 · 简体中文完整客户端</strong><small>构建号 18414 · ZIP · 约 23.4 GiB</small></div>
               <a href="./downloads/World-of-Warcraft-5.4.8.18414-zhCN.zip" aria-label="下载 5.4.8 简体中文完整客户端">下载客户端</a>
             </div>
-            <div class="download" id="client-548-downloader">
-              <div><strong>WoWClientRebuilder.zip</strong><small>客户端下载器 · Windows · 约 663 KiB</small></div>
-              <a href="./downloads/WoWClientRebuilder.zip" aria-label="下载 WoWClientRebuilder.zip">下载工具</a>
-            </div>
             <div class="download">
               <div><strong>GameIvy 运营服客户端补丁</strong><small>适用于 5.4.8（18414）客户端 · ZIP · 约 13.9 MiB</small></div>
               <a href="./downloads/WoW_Client_v5.4.8.18414.zip" aria-label="下载 GameIvy 5.4.8 运营服补丁">下载补丁</a>
             </div>
           </div>
-          <p>使用下载器时，解压并运行 <code>wowrebuild.exe</code>，选择 5.4.8、客户端语言和保存目录。工具会从暴雪的官方分发服务器下载客户端文件。</p>
           <p>游玩 GameIvy 运营服时，将补丁解压到 5.4.8（18414）客户端根目录，覆盖同名文件，再运行 <code>Launcher.cmd</code> 启动游戏。</p>
           <h3 id="client-retail">正式服客户端启动器</h3>
           <div class="download-list">
@@ -148,9 +143,10 @@
               <a href="https://github.com/1LineAtaTime/LoA-Pandaria-Playerbots#readme" aria-label="阅读 5.4.8 Playerbots 安装说明" target="_blank" rel="noopener">阅读项目说明 <span aria-hidden="true">↗</span></a>
             </div>
           </div>
+          <p id="client-548-downloader">需要下载 enUS 客户端时，可使用 <a href="./downloads/WoWClientRebuilder.zip">WoWClientRebuilder.zip</a>。解压并运行 <code>wowrebuild.exe</code>，选择 5.4.8、<code>enUS</code> 和保存目录。工具会从暴雪的官方分发服务器下载客户端文件。</p>
           <ol>
             <li>解压服务端发布包。Windows 使用 Win64 包，按发布说明安装所需运行库和 MySQL。</li>
-            <li>用<a href="#client-548-downloader">客户端下载器</a>准备 5.4.8（18414）enUS 客户端。将发布包中的提取工具放到客户端目录，在该目录运行 <code>mapextractor.exe</code>，生成 <code>dbc</code>、<code>maps</code> 和 <code>cameras</code>。</li>
+            <li>将发布包中的提取工具放到 5.4.8（18414）enUS 客户端目录，在该目录运行 <code>mapextractor.exe</code>，生成 <code>dbc</code>、<code>maps</code> 和 <code>cameras</code>。</li>
             <li>运行 <code>vmap4extractor.exe</code>，再运行 <code>vmap4assembler.exe Buildings vmaps</code>。创建空的 <code>mmaps</code> 目录，然后运行 <code>mmaps_generator.exe</code> 生成机器人寻路所需的数据。此步骤可能需要数小时。</li>
             <li>将 <code>dbc</code>、<code>maps</code>、<code>vmaps</code>、<code>mmaps</code> 和 <code>cameras</code> 放入服务端的同一个 Data 目录，在 <code>worldserver.conf</code> 中将 <code>DataDir</code> 指向该目录。</li>
             <li>全新安装时，导入发布包中的 <code>auth</code>、<code>characters</code>、<code>world</code> 和 <code>playerbots</code> 数据库转储，并填好连接配置。先启动 <code>authserver</code>，再启动 <code>worldserver</code>。已有实例按项目的升级步骤操作。</li>
