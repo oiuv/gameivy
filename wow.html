@@ -42,8 +42,8 @@
           <h3 id="client-335">3.3.5a 客户端下载</h3>
           <div class="download-list">
             <div class="download">
-              <div><strong>巫妖王之怒 · 简体中文客户端</strong><small>构建号 12340 · ZIP · 约 16.5 GiB</small></div>
-              <a href="./downloads/World-of-Warcraft-3.3.5a.12340-zhCN.zip" aria-label="下载 3.3.5a 简体中文客户端">下载客户端</a>
+              <div><strong>巫妖王之怒 · 简体中文完整客户端</strong><small>构建号 12340 · ZIP · 约 16.5 GiB</small></div>
+              <a href="./downloads/World-of-Warcraft-3.3.5.12340-zhCN.zip" aria-label="下载 3.3.5a 简体中文完整客户端">下载客户端</a>
             </div>
             <div class="download">
               <div><strong>GameIvy 运营服客户端补丁</strong><small>适用于 3.3.5a（12340）简体中文客户端 · ZIP · 约 3.4 MiB</small></div>
@@ -62,14 +62,23 @@
               <a href="./downloads/%E5%A4%A7%E8%84%9A%E6%8F%92%E4%BB%B6.rar" aria-label="下载大脚插件">下载插件</a>
             </div>
           </div>
-          <h3 id="client-548">5.4.8 客户端下载工具</h3>
+          <h3 id="client-548">5.4.8 客户端与补丁</h3>
           <div class="download-list">
             <div class="download">
-              <div><strong>WoWClientRebuilder.zip</strong><small>Windows 工具 · 约 14.5 MiB</small></div>
+              <div><strong>熊猫人之谜 · 简体中文完整客户端</strong><small>构建号 18414 · ZIP · 约 23.4 GiB</small></div>
+              <a href="./downloads/World-of-Warcraft-5.4.8.18414-zhCN.zip" aria-label="下载 5.4.8 简体中文完整客户端">下载客户端</a>
+            </div>
+            <div class="download" id="client-548-downloader">
+              <div><strong>WoWClientRebuilder.zip</strong><small>客户端下载器 · Windows · 约 663 KiB</small></div>
               <a href="./downloads/WoWClientRebuilder.zip" aria-label="下载 WoWClientRebuilder.zip">下载工具</a>
             </div>
+            <div class="download">
+              <div><strong>GameIvy 运营服客户端补丁</strong><small>适用于 5.4.8（18414）客户端 · ZIP · 约 13.9 MiB</small></div>
+              <a href="./downloads/WoW_Client_v5.4.8.18414.zip" aria-label="下载 GameIvy 5.4.8 运营服补丁">下载补丁</a>
+            </div>
           </div>
-          <p>解压后运行 <code>wowrebuild.exe</code>，在菜单中选择 5.4.8 及保存目录。工具会从暴雪的官方分发服务器下载客户端文件。为 5.4.8 Playerbots 提取服务端数据时，请下载 <code>enUS</code> 客户端。</p>
+          <p>使用下载器时，解压并运行 <code>wowrebuild.exe</code>，选择 5.4.8、客户端语言和保存目录。工具会从暴雪的官方分发服务器下载客户端文件。</p>
+          <p>游玩 GameIvy 运营服时，将补丁解压到 5.4.8（18414）客户端根目录，覆盖同名文件，再运行 <code>Launcher.cmd</code> 启动游戏。</p>
           <h3 id="client-retail">正式服客户端启动器</h3>
           <div class="download-list">
             <div class="download">
@@ -95,25 +104,13 @@
               <a href="https://github.com/wowdev" aria-label="查看 GitHub 项目 · WoWDev" target="_blank" rel="noopener">查看 GitHub 项目 <span aria-hidden="true">↗</span></a>
             </div>
           </div>
-          <h3 id="server-data-335">3.3.5a 服务端 Data</h3>
-          <div class="download-list">
-            <div class="download">
-              <div><strong>AzerothCore 预提取数据</strong><small>服务端使用的地图与 DBC 等数据文件。</small></div>
-              <a href="https://github.com/wowgaming/client-data/releases/" aria-label="打开 3.3.5a 服务端 Data 下载页" target="_blank" rel="noopener">前往下载 <span aria-hidden="true">↗</span></a>
-            </div>
-            <div class="download">
-              <div><strong>AzerothCore Windows 服务端配置</strong><small>包含预提取数据的安装、自行提取数据及服务端配置。</small></div>
-              <a href="https://www.azerothcore.org/wiki/windows-server-setup" aria-label="阅读 AzerothCore Windows 服务端配置指南" target="_blank" rel="noopener">阅读指南 <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-          <p>部署 AzerothCore 时，可下载与核心匹配的 enUS 预提取 Data，解压到服务端的 <code>Data</code> 目录，并在 <code>worldserver.conf</code> 中将 <code>DataDir</code> 指向该目录。玩家仍可用同构建号的简体中文客户端登录。自行提取时，用来提取的客户端安装目录需要包含对应语言的资源。</p>
         </section>
         <section id="playerbots">
           <h2>单机部署与玩家机器人</h2>
           <p>用玩家机器人组队或体验单机玩法时，可以按客户端版本选择以下项目。</p>
           <ul>
             <li><strong>3.3.5a AzerothCore Playerbots</strong>。按项目说明编译服务端，可下载与核心匹配的<a href="#server-data-335">预提取 enUS Data</a>。</li>
-            <li><strong>5.4.8 LoA-Pandaria-Playerbots</strong>。直接使用项目提供的服务端发布包，再用随包工具从 5.4.8（18414）enUS 客户端提取 Data。</li>
+            <li><strong>5.4.8 LoA-Pandaria-Playerbots</strong>。直接使用项目提供的服务端发布包，再用随包工具从 5.4.8（18414）enUS 客户端<a href="#playerbots-548-setup">提取 Data</a>。</li>
           </ul>
           <div class="download-list">
             <div class="download">
@@ -125,10 +122,25 @@
               <a href="https://github.com/1LineAtaTime/LoA-Pandaria-Playerbots" aria-label="查看 5.4.8 LoA-Pandaria-Playerbots 项目" target="_blank" rel="noopener">查看项目 <span aria-hidden="true">↗</span></a>
             </div>
           </div>
+        </section>
+        <section id="server-setup">
+          <h2>服务端安装与 Data</h2>
+          <h3 id="server-data-335">3.3.5a 安装与 Data</h3>
+          <div class="download-list">
+            <div class="download">
+              <div><strong>AzerothCore 预提取数据</strong><small>服务端使用的地图与 DBC 等数据文件。</small></div>
+              <a href="https://github.com/wowgaming/client-data/releases/" aria-label="打开 3.3.5a 服务端 Data 下载页" target="_blank" rel="noopener">前往下载 <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="download">
+              <div><strong>AzerothCore Windows 服务端配置</strong><small>包含预提取数据的安装、自行提取数据及服务端配置。</small></div>
+              <a href="https://www.azerothcore.org/wiki/windows-server-setup" aria-label="阅读 AzerothCore Windows 服务端配置指南" target="_blank" rel="noopener">阅读指南 <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <p>部署 AzerothCore 时，可下载与核心匹配的 enUS 预提取 Data，解压到服务端的 <code>Data</code> 目录，并在 <code>worldserver.conf</code> 中将 <code>DataDir</code> 指向该目录。玩家仍可用同构建号的简体中文客户端登录。自行提取时，用来提取的客户端安装目录需要包含对应语言的资源。</p>
           <h3 id="playerbots-548-setup">5.4.8 安装与 Data 提取</h3>
           <div class="download-list">
             <div class="download">
-              <div><strong>5.4.8 服务端发布包</strong><small>选择对应平台的服务端程序，并下载同版本的数据库包。</small></div>
+              <div><strong>LoA-Pandaria-Playerbots 服务端发布包</strong><small>选择对应平台的服务端程序，并下载同版本的数据库包。</small></div>
               <a href="https://github.com/1LineAtaTime/LoA-Pandaria-Playerbots/releases" aria-label="下载 5.4.8 Playerbots 服务端发布包" target="_blank" rel="noopener">查看发布包 <span aria-hidden="true">↗</span></a>
             </div>
             <div class="download">
@@ -138,7 +150,7 @@
           </div>
           <ol>
             <li>解压服务端发布包。Windows 使用 Win64 包，按发布说明安装所需运行库和 MySQL。</li>
-            <li>准备 <a href="#client-548">5.4.8（18414）enUS 客户端</a>。将发布包中的提取工具放到客户端目录，在该目录运行 <code>mapextractor.exe</code>，生成 <code>dbc</code>、<code>maps</code> 和 <code>cameras</code>。</li>
+            <li>用<a href="#client-548-downloader">客户端下载器</a>准备 5.4.8（18414）enUS 客户端。将发布包中的提取工具放到客户端目录，在该目录运行 <code>mapextractor.exe</code>，生成 <code>dbc</code>、<code>maps</code> 和 <code>cameras</code>。</li>
             <li>运行 <code>vmap4extractor.exe</code>，再运行 <code>vmap4assembler.exe Buildings vmaps</code>。创建空的 <code>mmaps</code> 目录，然后运行 <code>mmaps_generator.exe</code> 生成机器人寻路所需的数据。此步骤可能需要数小时。</li>
             <li>将 <code>dbc</code>、<code>maps</code>、<code>vmaps</code>、<code>mmaps</code> 和 <code>cameras</code> 放入服务端的同一个 Data 目录，在 <code>worldserver.conf</code> 中将 <code>DataDir</code> 指向该目录。</li>
             <li>全新安装时，导入发布包中的 <code>auth</code>、<code>characters</code>、<code>world</code> 和 <code>playerbots</code> 数据库转储，并填好连接配置。先启动 <code>authserver</code>，再启动 <code>worldserver</code>。已有实例按项目的升级步骤操作。</li>
@@ -168,7 +180,7 @@
           <li><a href="#play">游玩与客户端</a></li>
           <li><a href="#downloads">服务端源码与文档</a></li>
           <li><a href="#playerbots">单机部署与玩家机器人</a></li>
-          <li><a href="#playerbots-548-setup">5.4.8 安装与 Data 提取</a></li>
+          <li><a href="#server-setup">服务端安装与 Data</a></li>
           <li><a href="#deploy">自建部署顺序</a></li>
         </ul>
       </nav>
